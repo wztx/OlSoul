@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+﻿﻿<!DOCTYPE HTML>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -6,11 +6,6 @@
 	<link rel="stylesheet" media="screen" href="css/olsoul.css">
 	<style>
 		body{line-height:1.6;}
-		/* 留言板弹窗 窄版适配 */
-		.gbook-mask{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);display:none;justify-content:center;align-items:center;z-index:999;}
-		.gbook-box{width:700px;max-width:90%;height:600px;background:#fff;border-radius:6px;overflow:hidden;position:relative;}
-		.gbook-close{position:absolute;top:8px;right:10px;background:#eee;border:none;padding:2px 8px;cursor:pointer;border-radius:3px;}
-		iframe{width:100%;height:100%;border:0;}
 	</style>
 </head>
 
@@ -20,7 +15,6 @@
 		<h1 style="text-align: center;">OlSoulの地盘</h1>
 	</header>
 
-	<!-- 网盘同行 留言板按钮 - 留言板靠右 -->
 	<article style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;">
 		<div style="display:flex;flex-wrap:wrap;gap:10px;">
 			<a href="https://pan.baidu.com/s/1NR9FQ57iowBQ8_LeM79xmg" target="_blank" rel="nofollow noopener">
@@ -33,20 +27,8 @@
 				<span style="background: #0082c8;color: white;padding: 2px;border-radius: 3px;margin-right: 6px;font-size:12px">网盘三</span>
 			</a>
 		</div>
-		<!-- 留言板按钮靠右 -->
-		<a href="javascript:openGbook()" rel="nofollow noopener">
-			<span style="background: #0082c8;color: white;padding: 2px;border-radius: 3px;font-size:12px">留言板</span>
-		</a>
 	</article>
 	<br>
-
-	<!-- 留言板窄弹窗容器 -->
-	<div class="gbook-mask" id="gbookMask">
-		<div class="gbook-box">
-			<button class="gbook-close" onclick="closeGbook()">关闭</button>
-			<iframe src="https://free.3v.do/gbook/index.asp?username=olsoul"></iframe>
-		</div>
-	</div>
 
 	<article>
 		<p style="font-size:17px;font-weight:bold">Windows系统调校程序 By OlSoul</p>
@@ -191,27 +173,6 @@
 	</footer>
 
 <script>
-// 打开窄弹窗
-function openGbook(){
-	document.getElementById('gbookMask').style.display='flex';
-}
-
-// 关闭弹窗
-function closeGbook(){
-	document.getElementById('gbookMask').style.display='none';
-}
-
-// 点击遮罩关闭
-document.getElementById('gbookMask').onclick=function(e){
-	if(e.target===this) closeGbook();
-}
-
-// 按 ESC 键关闭弹窗
-document.addEventListener('keydown', function(e) {
-	if (e.key === 'Escape') {
-		closeGbook();
-	}
-});
 </script>
 
 </body>
